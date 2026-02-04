@@ -53,7 +53,6 @@ p {
   color: pink;
 }
 
-
 .cta {
   display: inline-block;
   padding: 12px 40px;
@@ -65,7 +64,6 @@ p {
   cursor: pointer;
   text-align: center;
 }
-
 
 .cta.portfolio {
   color: white;
@@ -79,8 +77,6 @@ p {
   border: 2px solid pink;
 }
 
-
-
 .cta.resume {
   color: white;
   background-color: gray;
@@ -92,7 +88,6 @@ p {
   background-color: pink;
   border: 2px solid pink;
 }
-
 
 .brand h1 {
   font-size: 3rem;
@@ -106,18 +101,11 @@ p {
 
 
 #header {
-  position: fixed;
-  z-index: 1000;
-  left: 0;
+  position: absolute; 
   top: 0;
-  width: 100vw;
-  height: auto;
-}
-
-#header .header {
-  min-height: 8vh;
-  background-color: rgba(31, 30, 30, 0.24);
-  transition: 0.3s ease background-color;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 #header .nav-bar {
@@ -125,20 +113,18 @@ p {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 100%;
   max-width: 1300px;
-  padding: 0 10px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: rgba(31, 30, 30, 0.24); 
 }
 
 #header .nav-list ul {
   list-style: none;
   display: flex;
-  flex-direction: row;
   gap: 30px;
   justify-content: flex-end;
   align-items: center;
-  margin: 0;
-  padding: 0;
 }
 
 #header .nav-list ul li {
@@ -149,13 +135,11 @@ p {
   font-size: 2rem;
   font-weight: 500;
   letter-spacing: 0.2rem;
-  text-decoration: none;
   color: white;
   text-transform: uppercase;
   padding: 10px 0;
   display: block;
 }
-
 
 #hero {
   background-image: url(./img/hero.png);
@@ -163,7 +147,13 @@ p {
   background-position: top center;
   position: relative;
   z-index: 1;
+  height: 100vh; 
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 50px;
 }
+
 
 #hero::after {
   content: '';
@@ -172,23 +162,30 @@ p {
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: black;
-  opacity: 0.7;
+  background-color: black; 
+  opacity: 0.5; 
   z-index: -1;
 }
+
 
 #hero .hero {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 50px;
-  justify-content: flex-start;
 }
 
 #hero h1 {
   font-size: 4rem;
-  color: white;
+  color: white; 
   margin-bottom: 10px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6); 
 }
+
+#hero p {
+  font-size: 1.4rem;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5); 
+}
+
 
 
 #services .services {
@@ -199,77 +196,65 @@ p {
   padding: 100px 0;
 }
 
-#services .service-top {
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-#services .service-top p {
-  color: black;
-  text-align: center;
-}
-
 
 #projects .projects {
   flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
   padding: 100px 0;
-}
-
-#projects .projects-header h1 {
-  margin-bottom: 50px;
+  text-align: center;
 }
 
 #projects .all-projects {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  gap: 30px;
 }
 
 #projects .project-item {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  align-items: center;
   width: 80%;
-  margin: 20px auto;
-  overflow: hidden;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 #projects .project-info {
-  padding: 30px;
   width: 100%;
+  padding: 30px;
   background-color: #485563;
   color: white;
 }
 
-#projects .project-info h1 {
+#projects .project-info h3 {
   font-size: 2.5rem;
-  font-weight: 500;
+  margin-bottom: 10px;
 }
 
 #projects .project-info p {
-  color: white;
+  font-size: 1.4rem;
+  line-height: 2rem;
 }
 
 #projects .project-img {
   width: 100%;
   height: 300px;
   overflow: hidden;
-  position: relative;
 }
 
 #projects .project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: 0.3s ease transform;
 }
 
 #projects .project-item:hover .project-img img {
   transform: scale(1.05);
 }
-
 
 #about .about {
   flex-direction: column-reverse;
@@ -285,80 +270,67 @@ p {
   margin: 0 auto;
 }
 
-#about .col-left .about-img {
-  height: 100%;
+#about .col-left img {
   width: 100%;
-  border: 10px solid white;
-}
-
-#about .col-left .about-img::after {
-  content: '';
-  position: absolute;
-  left: -33px;
-  top: 19px;
-  height: 98%;
-  width: 98%;
-  border: 7px solid pink;
-  z-index: -1;
+  height: 100%;
+  border-radius: 10px;
 }
 
 #about .col-right {
-  width: 100%;
   margin-top: 20px;
 }
 
 #about .col-right p {
   margin-bottom: 20px;
+  line-height: 2rem;
 }
-
 
 #contact .contact {
   flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
-  width: 90%;
+  padding: 100px 20px;
+  text-align: center;
 }
 
 #contact .contact-items {
-  max-width: 1200px;
-  width: 100%;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  align-items: center;
   gap: 20px;
 }
 
 #contact .contact-item {
-  width: 100%;
+  width: 90%;
+  max-width: 350px;
   padding: 30px;
-  text-align: center;
   border-radius: 10px;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-shadow: 0px 0px 18px 0 #0000002c;
-  transition: 0.3s ease box-shadow;
+  transition: 0.3s ease all;
 }
 
 #contact .contact-item:hover {
-  box-shadow: 0px 0px 5px 0 #0000002c;
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 25px 0 #0000003d;
 }
 
-#contact .icon {
+#contact .contact-item img {
   width: 70px;
   margin-bottom: 10px;
 }
 
-#contact .contact-info h1 {
-  font-size: 2.5rem;
-  font-weight: 500;
+#contact .contact-item h3 {
+  font-size: 2rem;
   margin-bottom: 5px;
 }
 
-#contact .contact-info h2 {
+#contact .contact-item p {
   font-size: 1.3rem;
   line-height: 2rem;
-  font-weight: 500;
 }
 
 
@@ -411,18 +383,13 @@ p {
 @media only screen and (max-width: 768px) {
   #header .nav-list ul {
     flex-direction: column;
-    position: fixed;
-    top: 8vh;
-    left: -100%;
+    position: relative;
+    top: 0;
+    left: 0;
     width: 100%;
     background-color: rgba(31, 30, 30, 0.95);
     gap: 0;
-    transition: 0.3s ease left;
     padding: 20px 0;
-  }
-
-  #header .nav-list ul.active {
-    left: 0;
   }
 }
 
