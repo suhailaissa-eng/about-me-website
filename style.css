@@ -1,4 +1,3 @@
-
 @import 'https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap';
 
 
@@ -26,6 +25,12 @@ p {
     margin-top: 5px;
 }
 
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .container {
     width: 100%;
     display: flex;
@@ -33,12 +38,6 @@ p {
     align-items: center;
     justify-content: center;
     padding: 40px 20px;
-}
-
-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 
@@ -74,12 +73,13 @@ img {
     color: white;
     background-color: gray;
     border: 2px solid gray;
+    margin-top: 20px;
 }
 
 .cta.portfolio:hover,
 .cta.resume:hover {
     background-color: pink;
-    border: 2px solid pink;
+    border-color: pink;
 }
 
 
@@ -105,7 +105,6 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
     max-width: 1300px;
     margin: 0 auto;
     padding: 10px 20px;
@@ -116,7 +115,6 @@ img {
     list-style: none;
     display: flex;
     gap: 30px;
-    justify-content: flex-end;
     align-items: center;
 }
 
@@ -126,7 +124,6 @@ img {
     letter-spacing: 0.2rem;
     color: white;
     text-transform: uppercase;
-    padding: 10px 0;
 }
 
 .hamburger {
@@ -142,34 +139,41 @@ img {
     background-size: cover;
     background-position: center;
     position: relative;
-    z-index: 1;
     height: 85vh;
     display: flex;
+    justify-content: center;
+
     align-items: center;
-    justify-content: flex-start;
-    padding-left: 60px;
+
+    padding-left: 0;
+
 }
 
 #hero::after {
     content: '';
     position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0,0,0,0.5);
-    z-index: -1;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none; 
 }
 
+
 .hero-text {
-    text-align: left;
+    position: relative;
+    text-align: center;
+
 }
+
+#hero .hero-text h1 {
+    color: white;
+}
+
 
 #hero h1 {
     font-size: 4.5rem;
     color: white;
     margin-bottom: 10px;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 #hero .main-name {
@@ -179,17 +183,21 @@ img {
 
 
 #services .services {
-    flex-direction: column;
-    text-align: center;
     max-width: 900px;
-    margin: 0 auto;
+    text-align: center;
     padding: 60px 20px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #services p {
     font-size: 1.7rem;
     line-height: 2.8rem;
-    text-align: left;
+
 }
 
 
@@ -197,30 +205,37 @@ img {
     display: flex;
     flex-direction: column;
     gap: 40px;
+    align-items: center;
+
+}
+
+.project-search {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 20px;
+    font-size: 1.6rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
 }
 
 .project-item {
     display: flex;
-    flex-direction: row; 
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
     border-radius: 12px;
     overflow: hidden;
-    gap: 20px;
-    align-items: flex-start; 
-    max-width: 900px; 
-    margin: 0 auto;
 }
 
 .project-img {
-    width: 35%; 
-    max-height: 300px; 
+    width: 35%;
+    max-height: 300px;
     overflow: hidden;
     border-radius: 12px;
 }
 
 .project-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     transition: 0.3s ease transform;
 }
 
@@ -231,15 +246,8 @@ img {
 .project-info {
     background-color: rgba(40, 40, 40, 0.9);
     padding: 25px 30px;
-    color: #ffffff; 
-    text-align: left;
+    color: white;
     flex: 1;
-    max-width: 550px; 
-}
-
-.project-info h3,
-.project-info p {
-    color: #ffffff; 
 }
 
 .project-info h3 {
@@ -248,73 +256,73 @@ img {
 }
 
 .project-info p {
+    color: white;
     font-size: 1.6rem;
     line-height: 2.2rem;
-    margin-bottom: 0;
 }
 
 
-
-
 #about .about {
-    flex-direction: column-reverse;
-    text-align: center;
     max-width: 1200px;
-    margin: 0 auto;
     padding: 60px 20px;
+    text-align: center;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #about .col-left {
     width: 450px;
     height: 450px;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 20px;
+
 }
 
 #about .col-left img {
-    width: 100%;
-    height: 100%;
     border-radius: 12px;
 }
 
 #about .col-right p {
     font-size: 1.8rem;
     line-height: 2.8rem;
-    color: #111;
-    text-align: left;
+    text-align: center;
+
 }
 
 
 #contact .contact {
-    flex-direction: column;
     max-width: 1200px;
-    margin: 0 auto;
     padding: 60px 20px;
     text-align: center;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .contact-items {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 25px;
+    align-items: center;
 }
 
 .contact-item {
-    width: 95%;
     max-width: 400px;
     padding: 50px;
     border-radius: 12px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0px 0px 20px 0 #0000002c;
-    transition: 0.3s ease all;
+    box-shadow: 0 0 20px #0000002c;
+    transition: 0.3s ease;
 }
 
 .contact-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0px 12px 30px 0 #0000003d;
+    box-shadow: 0 12px 30px #0000003d;
 }
 
 .contact-item img {
@@ -324,20 +332,11 @@ img {
 
 .contact-item h3 {
     font-size: 2.2rem;
-    margin-bottom: 5px;
-}
-
-.contact-item p {
-    font-size: 1.5rem;
-    line-height: 2.4rem;
 }
 
 
-@media only screen and (min-width: 768px) {
-
-
+@media (min-width: 768px) {
     .project-item {
-        flex-direction: row;
         height: 400px;
     }
 
@@ -345,21 +344,11 @@ img {
         flex-direction: row-reverse;
     }
 
-    .project-img {
-        width: 35%; 
-        height: 100%;
-        margin-bottom: 0;
-    }
-
-    .project-info {
-        width: 65%;
-        padding: 30px;
-    }
-
- 
     #about .about {
         flex-direction: row;
         text-align: left;
+        justify-content: center;
+
     }
 
     #about .col-left {
@@ -368,33 +357,25 @@ img {
         margin-right: 40px;
     }
 
-    #about .col-right {
-        flex: 1;
-        padding: 20px;
-    }
-
-  
-    #contact .contact-items {
+    .contact-items {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
+
     }
 
-    #contact .contact-item {
+    .contact-item {
         width: 32%;
-        margin: 0;
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .hamburger {
         display: block;
     }
 
     #header .nav-list ul {
         flex-direction: column;
-        width: 100%;
         background-color: rgba(31, 30, 30, 0.95);
-        gap: 0;
         padding: 10px 0;
     }
 
@@ -408,19 +389,8 @@ img {
         width: 100%;
     }
 
-    #about .about {
-        flex-direction: column-reverse;
-    }
-
-    #about .col-left {
-        width: 100%;
-        height: 350px;
-        margin-bottom: 20px;
-    }
-
     #hero {
         height: 75vh;
-        padding-left: 20px;
     }
 
     #hero h1 {
@@ -430,4 +400,13 @@ img {
     #hero .main-name {
         font-size: 4rem;
     }
+}
+
+.hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+    transition: 0.3s;
 }

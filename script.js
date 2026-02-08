@@ -2,61 +2,72 @@
 const projects = [
   {
     title: "GOIT",
-    desc: "A mobile application designed for internet subscription companies to manage subscriptions, subscribers, invoices, and digital payments efficiently.",
+    desc: "Mobile app for managing internet subscriptions and payments.",
     img: "./img/goit.png",
-    alt: "GOIT mobile application screenshot"
+    alt: "GOIT app"
   },
   {
     title: "Financial Hub",
-    desc: "A Big Data platform that analyzes relationships between global currencies and precious metals to provide actionable financial insights.",
+    desc: "Big Data platform for analyzing currencies and metals.",
     img: "./img/financial.png",
-    alt: "Financial Hub data visualization dashboard"
+    alt: "Financial Hub"
   },
   {
     title: "Coplay",
-    desc: "A mobile application that connects players and football field owners by enabling easy booking, scheduling, and player matching.",
+    desc: "Football booking and player matching application.",
     img: "./img/coplay.png",
-    alt: "Coplay football booking app interface"
+    alt: "Coplay app"
   }
 ];
 
 const projectsContainer = document.getElementById("projects-container");
 
-projects.forEach((proj) => {
-  const projectHTML = `
-    <article class="project-item">
-      <div class="project-img">
-        <img src="${proj.img}" alt="${proj.alt}" />
-      </div>
-      <div class="project-info">
-        <h3>${proj.title}</h3>
-        <p>${proj.desc}</p>
-      </div>
-    </article>
-  `;
-  projectsContainer.innerHTML += projectHTML;
+function renderProjects(list) {
+  projectsContainer.innerHTML = "";
+  list.forEach(p => {
+    projectsContainer.innerHTML += `
+      <article class="project-item">
+        <div class="project-img">
+          <img src="${p.img}" alt="${p.alt}">
+        </div>
+        <div class="project-info">
+          <h3>${p.title}</h3>
+          <p>${p.desc}</p>
+        </div>
+      </article>
+    `;
+  });
+}
+
+renderProjects(projects);
+
+const searchInput = document.getElementById("project-search");
+
+searchInput.addEventListener("input", e => {
+  const value = e.target.value.toLowerCase();
+  const filtered = projects.filter(p =>
+    p.title.toLowerCase().includes(value) ||
+    p.desc.toLowerCase().includes(value)
+  );
+  renderProjects(filtered);
 });
 
 
 const contacts = [
-  { title: "Phone", info: "+972 598458775", icon: "https://img.icons8.com/bubbles/100/000000/phone.png" },
-  { title: "Email", info: "suhailaissa610@gmail.com", icon: "https://img.icons8.com/bubbles/100/000000/new-post.png" },
-  { title: "Address", info: "Palestine, Tulkarem", icon: "https://img.icons8.com/bubbles/100/000000/map-marker.png" }
+  { title: "Phone", info: "+972 598458775" },
+  { title: "Email", info: "suhailaissa610@gmail.com" },
+  { title: "Address", info: "Palestine, Tulkarem" }
 ];
 
 const contactContainer = document.getElementById("contact-container");
 
-contacts.forEach(contact => {
-  const contactHTML = `
+contacts.forEach(c => {
+  contactContainer.innerHTML += `
     <div class="contact-item">
-      <img src="${contact.icon}" alt="${contact.title} icon" />
-      <div>
-        <h3>${contact.title}</h3>
-        <p>${contact.info}</p>
-      </div>
+      <h3>${c.title}</h3>
+      <p>${c.info}</p>
     </div>
   `;
-  contactContainer.innerHTML += contactHTML;
 });
 
 
