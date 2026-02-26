@@ -9,7 +9,14 @@ import { ContactComponent } from './components/contact/contact.component';
 @Component({
   selector:'app-root',
   standalone:true,
-  imports:[HeaderComponent, HeroComponent, ServicesComponent, ProjectsComponent, AboutComponent, ContactComponent],
+  imports:[
+    HeaderComponent, 
+    HeroComponent,
+    ServicesComponent,
+    ProjectsComponent,
+    AboutComponent,
+    ContactComponent
+  ],
   template:`
     <app-header></app-header>
     <app-hero></app-hero>

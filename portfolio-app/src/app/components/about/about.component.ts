@@ -1,21 +1,24 @@
 import { Component } from '@angular/core';
-import { CardModule } from '@progress/kendo-angular-layout';
-import { ButtonsModule } from '@progress/kendo-angular-buttons';
+import { AboutCardComponent } from './about-card.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector:'app-about',
-  standalone:true,
-  imports:[CardModule, ButtonsModule],
-  template: `
-    <kendo-card>
-      <div style="display:flex;flex-direction:column;align-items:center;">
-        <img src="./assets/suhaila.png" alt="Suhaila" style="width:200px;height:200px;border-radius:12px"/>
-        <h2>About <span>Me</span></h2>
-        <p>I’m Suhaila, a software engineering student with experience in full-stack, mobile, Big Data, databases, and QA.</p>
-        <a kendoButton href="./assets/Suhaila.pdf" target="_blank">Download Resume</a>
-      </div>
-    </kendo-card>
-  `,
-  styles:[`span{color:pink;}`]
+  selector: 'app-about',
+  standalone: true,
+  imports: [CommonModule, AboutCardComponent],
+  templateUrl: './about.component.html',
+  styleUrls: ['./about.component.css']
 })
-export class AboutComponent {}
+
+export class AboutComponent {
+  aboutContent = {
+    title: 'About',
+    subtitleSpan: 'Me',
+    subtitle: 'Software Engineering Student',
+    paragraphs: [
+      'I’m Suhaila, a passionate Software Engineering student with experience in Full-Stack Development, Mobile Apps, Big Data, Databases, and Quality Assurance.',
+      'I focus on building clean, scalable solutions and continuously improving my technical skills.'
+    ],
+    resumeLink: 'assets/Suhaila.pdf'
+  };
+}

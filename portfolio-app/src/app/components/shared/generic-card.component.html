@@ -1,0 +1,11 @@
+<kendo-card class="generic-card">
+      <div *ngIf="card.icon || card.image" class="card-media">
+        <img *ngIf="card.icon" [src]="card.icon" alt="icon" />
+        <img *ngIf="card.image" [src]="card.image" alt="image" />
+      </div>
+      <div class="card-content">
+        <h3>{{ card.title }}</h3>
+        <p *ngIf="card.description">{{ card.description }}</p>
+        <a *ngIf="card.link" [href]="card.link" target="_blank" class="card-link">Open</a>
+      </div>
+    </kendo-card>

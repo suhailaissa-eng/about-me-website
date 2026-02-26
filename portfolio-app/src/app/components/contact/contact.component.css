@@ -1,0 +1,22 @@
+.contact-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+}
+
+.contact-title span {
+  color: pink;
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}

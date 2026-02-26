@@ -1,0 +1,83 @@
+
+.about-section {
+  background: #ffffff;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-container {
+  width: 1200px;
+  max-width: 95%;
+}
+
+
+.about-card {
+  width: 100%;
+  border-radius: 20px;
+  padding: 60px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  background: #fff;
+}
+
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.avatar {
+  width: 220px;
+  height: 220px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+
+.header-text h2 {
+  font-size: 42px;
+  margin: 0 0 10px;
+}
+
+.header-text h2 span {
+  color: pink; 
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-top: 0;
+}
+
+
+.card-body p {
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+
+.card-actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.resume-btn {
+  background-color: pink; 
+  color: #fff;
+  padding: 15px 40px;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.resume-btn:hover {
+  background-color: #ff69b4;
+  transform: scale(1.05);
+}

@@ -1,0 +1,11 @@
+<header id="header"class="header-toolbar">
+
+  <button class="hamburger" (click)="toggleMenu()">☰</button>
+
+
+  <nav class="menu-items" [class.open]="menuOpen">
+    <button *ngFor="let section of sections" kendoButton (click)="scrollTo(section.id)">
+      {{ section.name }}
+    </button>
+  </nav>
+</header>
