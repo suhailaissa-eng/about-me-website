@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
-import { GenericCardComponent, GenericCard } from '../shared/generic-card.component';
 import { CommonModule } from '@angular/common';
+import { GenericCardComponent, GenericCard } from '../shared/generic-card.component';
 
 @Component({
   selector: 'app-contact',

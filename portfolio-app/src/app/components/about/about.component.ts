@@ -1,23 +1,16 @@
-import { Component, signal } from '@angular/core';
-import { AboutCardComponent } from '../about-card/about-card.component';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-export interface AboutContent {
-  title: string;
-  subtitleSpan: string;
-  subtitle: string;
-  paragraphs: string[];
-  resumeLink: string;
-}
+import { AboutCardComponent, AboutContent } from '../about-card/about-card.component';
 
 @Component({
   selector: 'app-about',
   standalone: true,
   imports: [CommonModule, AboutCardComponent],
   templateUrl: './about.component.html',
+  styleUrls: ['./about.component.css']
 })
 export class AboutComponent {
-  aboutContent = signal<AboutContent>({
+  aboutContent: AboutContent = {
     title: 'About',
     subtitleSpan: 'Me',
     subtitle: 'Software Engineering Student',
@@ -26,5 +19,5 @@ export class AboutComponent {
       'I focus on building clean, scalable solutions and continuously improving my technical skills.'
     ],
     resumeLink: 'assets/Suhaila.pdf'
-  });
+  };
 }

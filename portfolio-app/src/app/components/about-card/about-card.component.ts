@@ -1,5 +1,13 @@
-import { Component, input, InputSignal } from '@angular/core';
+import { Component, InputSignal, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+export interface AboutContent {
+  title: string;
+  subtitleSpan: string;
+  subtitle: string;
+  paragraphs: string[];
+  resumeLink: string;
+}
 
 @Component({
   selector: 'app-about-card',
@@ -9,9 +17,5 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./about-card.component.css']
 })
 export class AboutCardComponent {
-  public title: InputSignal<string> = input.required<string>();
-  public subtitleSpan: InputSignal<string> = input.required<string>();
-  public subtitle: InputSignal<string> = input.required<string>();
-  public paragraphs: InputSignal<string[]> = input.required<string[]>();
-  public resumeLink: InputSignal<string | undefined> = input<string | undefined>();
+  public content: InputSignal<AboutContent> = input.required<AboutContent>();
 }

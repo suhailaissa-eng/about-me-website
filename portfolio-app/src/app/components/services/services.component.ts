@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
-import { GenericCardComponent, GenericCard } from '../shared/generic-card.component';
 import { CommonModule } from '@angular/common';
+import { GenericCardComponent, GenericCard } from '../shared/generic-card.component';
 
 @Component({
   selector: 'app-services',
@@ -10,18 +10,9 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./services.component.css']
 })
 export class ServicesComponent {
-  services = signal([
-    signal<GenericCard>({
-      title: 'Web & Mobile Apps',
-      description: 'Building responsive and modern web & mobile applications using Angular, Flutter, and other frameworks.'
-    }),
-    signal<GenericCard>({
-      title: 'QA & Testing',
-      description: 'Providing end-to-end testing solutions including automated and manual testing for software quality assurance.'
-    }),
-    signal<GenericCard>({
-      title: 'Big Data & Analytics',
-      description: 'Designing data pipelines, dashboards, and analytics platforms for informed decision-making.'
-    })
+  services = signal<GenericCard[]>([
+    { title: 'Web & Mobile Apps', description: 'Building responsive web & mobile applications using Angular, Flutter, and more.' },
+    { title: 'QA & Testing', description: 'Providing end-to-end testing solutions including automated and manual testing.' },
+    { title: 'Big Data & Analytics', description: 'Designing data pipelines, dashboards, and analytics platforms.' }
   ]);
 }

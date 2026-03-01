@@ -1,17 +1,17 @@
 <div class="about-card">
   <div class="card-header">
     <div class="header-text">
-      <h2 class="about-title">{{ title() }} <span>{{ subtitleSpan() }}</span></h2>
-      <p class="subtitle">{{ subtitle() }}</p>
+      <h2 class="about-title">{{ content().title }} <span>{{ content().subtitleSpan }}</span></h2>
+      <p class="subtitle">{{ content().subtitle }}</p>
     </div>
   </div>
 
   <div class="card-body">
-    <p *ngFor="let paragraph of paragraphs()">{{ paragraph }}</p>
+    <p *ngFor="let paragraph of content().paragraphs">{{ paragraph }}</p>
   </div>
 
-  <div class="card-actions" *ngIf="resumeLink()">
-    <a [href]="resumeLink()" target="_blank" class="resume-btn">
+  <div class="card-actions" *ngIf="content().resumeLink">
+    <a [href]="content().resumeLink" target="_blank" class="resume-btn">
       Download My Resume
     </a>
   </div>
