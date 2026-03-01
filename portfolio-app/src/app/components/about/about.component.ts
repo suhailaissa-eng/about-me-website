@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AboutCardComponent } from './about-card.component';
+import { AboutCardComponent } from '../about-card/about-card.component';
 import { CommonModule } from '@angular/common';
 
 @Component({
