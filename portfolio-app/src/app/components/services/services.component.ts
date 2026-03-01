@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { GenericCardComponent, GenericCard } from '../shared/generic-card.component';
 import { CommonModule } from '@angular/common';
 
@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./services.component.css']
 })
 export class ServicesComponent {
-  services: GenericCard[] = [
+  services = signal<GenericCard[]>([
     {
       title: 'Web & Mobile Apps',
       description: 'Building responsive and modern web & mobile applications using Angular, Flutter, and other frameworks.'
@@ -23,5 +23,5 @@ export class ServicesComponent {
       title: 'Big Data & Analytics',
       description: 'Designing data pipelines, dashboards, and analytics platforms for informed decision-making.'
     }
-  ];
+  ]);
 }

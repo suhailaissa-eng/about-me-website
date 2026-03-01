@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { GenericCardComponent, GenericCard } from '../shared/generic-card.component';
 import { CommonModule } from '@angular/common';
 
@@ -10,9 +10,9 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
-  contacts: GenericCard[] = [
+  contacts = signal<GenericCard[]>([
     { title: 'Phone', description: '+972 598458775' },
     { title: 'Email', description: 'suhailaissa610@gmail.com' },
     { title: 'Address', description: 'Palestine, Tulkarem' }
-  ];
+  ]);
 }

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input, InputSignal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardModule } from '@progress/kendo-angular-layout';
 
@@ -14,9 +14,9 @@ export interface GenericCard {
   selector: 'app-generic-card',
   standalone: true,
   imports: [CommonModule, CardModule],
-  templateUrl: `./generic-card.component.html`,
+  templateUrl: './generic-card.component.html',
   styleUrls: ['./generic-card.component.css']
 })
 export class GenericCardComponent {
-  @Input() card!: GenericCard;
+  public card: InputSignal<GenericCard> = input.required<GenericCard>();
 }

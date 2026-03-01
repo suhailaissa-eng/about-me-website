@@ -1,17 +1,17 @@
-import { Component, Input } from '@angular/core';
+import { Component, input, InputSignal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-about-card',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: `./about-card.component.html`,
+  templateUrl: './about-card.component.html',
   styleUrls: ['./about-card.component.css']
 })
 export class AboutCardComponent {
-  @Input() title!: string;
-  @Input() subtitleSpan!: string;
-  @Input() subtitle!: string;
-  @Input() paragraphs!: string[];
-  @Input() resumeLink?: string;
+  public title: InputSignal<string> = input.required<string>();
+  public subtitleSpan: InputSignal<string> = input.required<string>();
+  public subtitle: InputSignal<string> = input.required<string>();
+  public paragraphs: InputSignal<string[]> = input.required<string[]>();
+  public resumeLink: InputSignal<string | undefined> = input<string | undefined>();
 }
