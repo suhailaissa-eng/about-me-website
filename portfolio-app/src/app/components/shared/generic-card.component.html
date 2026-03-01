@@ -1,12 +1,12 @@
 <kendo-card class="generic-card">
-  <div *ngIf="card().icon || card().image" class="card-media">
-    <img *ngIf="card().icon" [src]="card().icon" alt="icon" />
-    <img *ngIf="card().image" [src]="card().image" alt="image" />
+  <div *ngIf="content().icon || content().image" class="card-media">
+    <img *ngIf="content().icon" [src]="content().icon" alt="icon" />
+    <img *ngIf="content().image" [src]="content().image" alt="image" />
   </div>
 
   <div class="card-content">
-    <h3>{{ card().title }}</h3>
-    <p *ngIf="card().description">{{ card().description }}</p>
-    <a *ngIf="card().link" [href]="card().link" target="_blank" class="card-link">Open</a>
+    <h3>{{ content().title }}</h3>
+    <p *ngIf="content().description">{{ content().description }}</p>
+    <a *ngIf="content().link" [href]="content().link" target="_blank" class="card-link">Open</a>
   </div>
 </kendo-card>

@@ -10,18 +10,18 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./services.component.css']
 })
 export class ServicesComponent {
-  services = signal<GenericCard[]>([
-    {
+  services = signal([
+    signal<GenericCard>({
       title: 'Web & Mobile Apps',
       description: 'Building responsive and modern web & mobile applications using Angular, Flutter, and other frameworks.'
-    },
-    {
+    }),
+    signal<GenericCard>({
       title: 'QA & Testing',
       description: 'Providing end-to-end testing solutions including automated and manual testing for software quality assurance.'
-    },
-    {
+    }),
+    signal<GenericCard>({
       title: 'Big Data & Analytics',
       description: 'Designing data pipelines, dashboards, and analytics platforms for informed decision-making.'
-    }
+    })
   ]);
 }
