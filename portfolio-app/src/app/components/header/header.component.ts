@@ -25,8 +25,7 @@ export class HeaderComponent {
   }
 
   scrollTo(id: string) {
-    const el = document.getElementById(id);
-    if(el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     this.menuOpen = false;
   }
 }

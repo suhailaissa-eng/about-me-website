@@ -1,9 +1,9 @@
-<div class="about-card">
+<kendo-card class="about-card">
   <div class="card-header">
-    <div class="header-text">
-      <h2 class="about-title">{{ content().title }} <span>{{ content().subtitleSpan }}</span></h2>
-      <p class="subtitle">{{ content().subtitle }}</p>
-    </div>
+    <h2 class="about-title">
+      {{ content().title }} <span>{{ content().subtitleSpan }}</span>
+    </h2>
+    <p class="subtitle">{{ content().subtitle }}</p>
   </div>
 
   <div class="card-body">
@@ -11,8 +11,8 @@
   </div>
 
   <div class="card-actions" *ngIf="content().resumeLink">
-    <a [href]="content().resumeLink" target="_blank" class="resume-btn">
+    <a class="resume-btn" [href]="content().resumeLink" target="_blank">
       Download My Resume
     </a>
   </div>
-</div>
+</kendo-card>

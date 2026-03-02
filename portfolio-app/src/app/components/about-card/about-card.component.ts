@@ -1,5 +1,7 @@
 import { Component, InputSignal, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CardModule } from '@progress/kendo-angular-layout';
+import { ButtonsModule } from '@progress/kendo-angular-buttons';
 
 export interface AboutContent {
   title: string;
@@ -12,7 +14,7 @@ export interface AboutContent {
 @Component({
   selector: 'app-about-card',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, CardModule, ButtonsModule],
   templateUrl: './about-card.component.html',
   styleUrls: ['./about-card.component.css']
 })

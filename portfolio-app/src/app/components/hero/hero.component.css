@@ -1,42 +1,31 @@
 .hero-container {
   text-align: center;
-  padding: 100px 20px; 
-  background-color: #222; 
+  padding: 100px 20px;
+  background-color: #222;
   color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-container h1 {
-  margin: 10px 0;
-  font-weight: 400;
 }
 
 .main-name {
   font-size: 4rem;
   font-weight: bold;
-  color: pink; 
+  color: pink;
   margin-bottom: 30px;
 }
 
-.hero-container button {
+.hero-btn {
   font-size: 1.2rem;
   padding: 0.6rem 2rem;
   border-radius: 10px;
-  background-color: pink;
-  color: white;
-  border: none;
-  cursor: pointer;
   transition: 0.3s;
+  background-color: pink !important;
+  border-color: pink !important;
 }
 
-.hero-container button:hover {
-  background-color: pink;
+.hero-btn:hover {
   transform: scale(1.05);
+  background-color: black!important; 
+  border-color: black!important;
 }
-
 
 @media (max-width: 768px) {
   .main-name {
@@ -45,7 +34,7 @@
   .hero-container {
     padding: 80px 10px;
   }
-  .hero-container button {
+  .hero-btn {
     width: 80%;
   }
 }

@@ -1,12 +1,29 @@
 <kendo-card class="generic-card">
+
+
   <div *ngIf="content().icon || content().image" class="card-media">
     <img *ngIf="content().icon" [src]="content().icon" alt="icon" />
     <img *ngIf="content().image" [src]="content().image" alt="image" />
   </div>
 
-  <div class="card-content">
-    <h3>{{ content().title }}</h3>
+
+  <kendo-card-header>
+    <h3 class="card-title">{{ content().title }}</h3>
+  </kendo-card-header>
+
+
+  <kendo-card-body>
     <p *ngIf="content().description">{{ content().description }}</p>
-    <a *ngIf="content().link" [href]="content().link" target="_blank" class="card-link">Open</a>
-  </div>
+
+    <div *ngIf="content().link" class="card-actions">
+      <a
+        kendoButton
+        size="small"
+        [attr.href]="content().link"
+        target="_blank">
+        Open
+      </a>
+    </div>
+  </kendo-card-body>
+
 </kendo-card>

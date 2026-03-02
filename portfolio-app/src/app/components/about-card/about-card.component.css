@@ -1,14 +1,19 @@
+::ng-deep kendo-card.about-card {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 auto !important;
+}
+
 .about-card {
   width: 100%;
   border-radius: 20px;
   padding: 60px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   background: #fff;
+  text-align: center;
 }
 
-
 .card-header {
-  text-align: center;
   margin-bottom: 40px;
 }
 
@@ -28,13 +33,12 @@
   margin-top: 0;
 }
 
-
 .card-body p {
   font-size: 18px;
   line-height: 1.8;
   margin-bottom: 20px;
+  text-align: center;
 }
-
 
 .card-actions {
   margin-top: 30px;
@@ -55,4 +59,28 @@
 .resume-btn:hover {
   background-color: #e73370;
   transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+  .about-card {
+    padding: 40px 20px;
+  }
+
+  .about-title {
+    font-size: 32px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .card-body p {
+    font-size: 16px;
+  }
+
+  .resume-btn {
+    width: 100%;
+    padding: 12px 0;
+  }
 }

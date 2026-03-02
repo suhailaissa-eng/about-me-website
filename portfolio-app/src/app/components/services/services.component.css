@@ -1,21 +1,6 @@
-.services-container {
-  max-width: 1200px;
-  margin: 50px auto;
-  text-align: center;
-  padding: 0 20px;
-}
-
-.services-container h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-}
-
-.services-container h2 span {
-  color: pink;
-}
-
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 280px));
   gap: 30px;
+  justify-content: center;  
 }

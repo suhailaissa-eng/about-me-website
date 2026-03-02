@@ -1,13 +1,13 @@
-<section id="projects" class="projects-section">
-  <h2>Recent <span>Projects</span></h2>
+<section id="projects" class="projects-section k-mx-auto k-max-width-1200 k-px-4 k-mt-12">
+  <h2 class="k-text-center k-mb-4">Recent <span class="k-text-pink">Projects</span></h2>
 
-  <div class="search-container">
-    <input kendoTextBox [(ngModel)]="search" placeholder="Search projects..." />
+  <div class="search-container k-flex k-justify-center k-mb-5">
+    <input kendoTextBox [(ngModel)]="search" placeholder="Search projects..." class="k-width-350"/>
   </div>
 
   <div class="projects-grid">
     <kendo-card *ngFor="let p of filteredProjects()" class="project-card">
-      <img [src]="p.img" [alt]="p.alt" />
+      <img [src]="p.img" [alt]="p.alt"/>
       <div class="card-content">
         <h3>{{p.title}}</h3>
         <p>{{p.desc}}</p>
